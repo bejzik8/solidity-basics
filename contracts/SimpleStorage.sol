@@ -15,13 +15,19 @@ contract SimpleStorage {
     // bytes32 favoriteBytes = 'cat'; // 0x12412412fsafas; bytes2, bytes4, bytes8...
 
     // This gets initialized to zero if no value assigned!
-    uint256 public favoriteNumber; // 0 index
+    uint256 favoriteNumber; // 0 index
+
+    // TYPE of the variable, VISIBILITY of the variable, NAME of the variable
     uint256 public brothersFavoriteNumber; // 1 index
 
-    People public person1 = People({ favoriteNumber: 8, name: 'Mirko' });
-    People public person2 = People({ favoriteNumber: 3, name: 'Nikola' });
-    People public person3 = People({ favoriteNumber: 5, name: 'Ivana' });
-    People public person4 = People({ favoriteNumber: 7, name: 'Teodora' });
+    // People public person1 = People({ favoriteNumber: 8, name: 'Mirko' });
+    // People public person2 = People({ favoriteNumber: 3, name: 'Nikola' });
+    // People public person3 = People({ favoriteNumber: 5, name: 'Ivana' });
+    // People public person4 = People({ favoriteNumber: 7, name: 'Teodora' });
+
+    // max. 3 uint in the array
+    // uint256[3] public favoriteNumbersList;
+    People[] public people;
 
     struct People {
         uint256 favoriteNumber;
@@ -42,13 +48,20 @@ contract SimpleStorage {
     // }
 
     // view, pure - gasless; disallow modification of the state
-    function retrieve() public view returns(uint256) {
+    function retrieveFavoriteNumber() public view returns(uint256) {
         return favoriteNumber;
     }
 
     // function add() public pure returns(uint256) {
     //     return(1 + 1);
     // }
+
+    function addPerson(uint256 _favoriteNumber, string memory _name) public {
+        // People memory newPerson = People({ favoriteNumber: _favoriteNumber, name: _name });
+        // people.push(newPerson);
+
+        people.push(People(_favoriteNumber, _name));
+    }
 }
 
 // 0xd9145CCE52D386f254917e481eB44e9943F39138
