@@ -34,6 +34,8 @@ contract SimpleStorage {
         string name;
     }
 
+    mapping(string => uint256) public nameToFavoriteNumber;
+
     function store(uint256 _favoriteNumber) public {
         favoriteNumber = _favoriteNumber;
         // uint256 testVar = 5;
@@ -56,11 +58,20 @@ contract SimpleStorage {
     //     return(1 + 1);
     // }
 
+    // parameter can't be stored in: stack, code & logs
+    // parameter can be stored in: calldata, memory & storage
+
+    // calldata - temporary variable that can't be modified
+    // memory - temporary variable that can be modified
+    // storage - permanent variable that can be modified
+
+    // string - array of bytes, must be stored somewhere
     function addPerson(uint256 _favoriteNumber, string memory _name) public {
         // People memory newPerson = People({ favoriteNumber: _favoriteNumber, name: _name });
         // people.push(newPerson);
 
         people.push(People(_favoriteNumber, _name));
+        nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }
 
