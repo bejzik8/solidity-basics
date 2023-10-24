@@ -15,7 +15,18 @@ contract SimpleStorage {
     // bytes32 favoriteBytes = 'cat'; // 0x12412412fsafas; bytes2, bytes4, bytes8...
 
     // This gets initialized to zero if no value assigned!
-    uint256 public favoriteNumber;
+    uint256 public favoriteNumber; // 0 index
+    uint256 public brothersFavoriteNumber; // 1 index
+
+    People public person1 = People({ favoriteNumber: 8, name: 'Mirko' });
+    People public person2 = People({ favoriteNumber: 3, name: 'Nikola' });
+    People public person3 = People({ favoriteNumber: 5, name: 'Ivana' });
+    People public person4 = People({ favoriteNumber: 7, name: 'Teodora' });
+
+    struct People {
+        uint256 favoriteNumber;
+        string name;
+    }
 
     function store(uint256 _favoriteNumber) public {
         favoriteNumber = _favoriteNumber;

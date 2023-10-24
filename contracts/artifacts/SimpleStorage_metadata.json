@@ -7,12 +7,97 @@
 		"abi": [
 			{
 				"inputs": [],
+				"name": "brothersFavoriteNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "favoriteNumber",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "person1",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "person2",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "person3",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "person4",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -73,11 +158,11 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0x268ab6aa3194531f551ef5659da7f873e33fe207dd4c67fa359950a799a9db0f",
+			"keccak256": "0x606eb614831c3e1e545404fe9120e78a85c11ad56e56f79a065964e22e7b7b97",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9734d2395cc1a9377352f40f719d2b66a01898f2d770bbf641b452d6f1ce2046",
-				"dweb:/ipfs/QmScvP8PopcQEEqFcfBwJC3xbeF1AXe1aAHhSJyJKwBEik"
+				"bzz-raw://5cb8a3517f50bc91f704b39bdee3150e6619a11f3695d890185b45438744bd02",
+				"dweb:/ipfs/QmZaDtwhbcWc3x4KafU8gGQ8B3R5KrhXPjdBkE5DhMq5pr"
 			]
 		}
 	},
