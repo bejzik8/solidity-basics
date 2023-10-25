@@ -58,8 +58,8 @@ contract SimpleStorage {
     //     return(1 + 1);
     // }
 
-    // parameter can't be stored in: stack, code & logs
-    // parameter can be stored in: calldata, memory & storage
+    // parameter can't be stored in: stack, code, logs & storage
+    // parameter can be stored in: calldata & memory
 
     // calldata - temporary variable that can't be modified
     // memory - temporary variable that can be modified
